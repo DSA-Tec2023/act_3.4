@@ -1,29 +1,30 @@
 #include <iostream>
+#include <fstream>
 #include "BST.cpp"
+using namespace std;
 
 int main() {
-    BST a;
-
-    std::ifstream inputFile("in.txt");
+    ifstream inputFile("in.txt");
     if (!inputFile.is_open()) {
-        std::cerr << "Error al abrir el archivo 'in.txt'" << std::endl;
+        cerr << "Error al abrir el archivo 'in.txt'" << endl;
         return 1; // Sale del programa con un código de error
     }
     
     int n;
-    inputFile >> n; // Lee la longitud del vector desde la primera línea
+    inputFile >> n; // Lee la longitud del BST desde la primera línea
     
-    
-    std::vector<int> miVector;
-    
+    BST a;
 
     for (int i = 0; i < n; i++) {
         int elemento;
         inputFile >> elemento;
-        miVector.push_back(elemento);
+        a.insertar(elemento);
     }
 
+    inputFile.close();
 
-    std::cout << "Hello, world!" << std::endl;
+    a.inorden();
+    cout << endl;
+
     return 0; 
 }
