@@ -1,25 +1,26 @@
-# Makefile for a single C++ source file
-
 # Compiler
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -Wall -std=c++11
 
-# Source file
-SRCS = main.cpp
+# Source files
+SOURCES = BST.cpp main.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
 
-# Output executable name
-TARGET = myprogram
+# Target executable
+TARGET = program
 
-# Build rule
-$(TARGET): $(SRCS)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
+all: $(TARGET)
 
-# Clean rule
+$(TARGET): $(OBJECTS)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 clean:
-	rm -f $(TARGET)
-	
+	rm -f $(OBJECTS) $(TARGET)
+
 run: $(TARGET)
 	./$(TARGET)
-.PHONY: clean
