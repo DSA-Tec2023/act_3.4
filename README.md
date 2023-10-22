@@ -3,9 +3,9 @@
 
 ### Equipo
 - Andrés Martínez, A00227463
-- Fernanda Granados, A0125
-- Santiago Poblete, A0125
-- Martín Tánori, A0125
+- Fernanda Granados, A01252895
+- Santiago Poblete, A01254609
+- Martín Tánori, A01252900
 
 ### Makefile 
 Este proyecto cuenta con un archivo `makefile`, para ejecutar el proyecto puede utilizar el siguiente comando:
