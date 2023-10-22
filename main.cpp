@@ -23,13 +23,30 @@ int main() {
 
     inputFile.close();
 
-    vector<int> hola = a.inorden();
-    cout << endl;
+    vector<int> arbolOrd = a.inorden();
+    int size = 0;
+    size = arbolOrd.size();
 
-    for(int i=0; i<hola.size(); i++){
-        cout << hola[i] << " ";
+    for(int i=0; i<size; i++){
+        cout << arbolOrd[i] << " ";
     }
     cout << endl;
+    
+    int nOperaciones = 0; 
+    int total = 0;
+
+    nOperaciones = arbolOrd[0] + arbolOrd[1] - 1;
+    total = nOperaciones;
+    
+    // cout << nOperaciones << endl; // para revisar que se haga bien la primera operacion
+
+    for(int i=2; i<size; i++){
+        nOperaciones = nOperaciones + arbolOrd[i] - 1;
+        //cout << nOperaciones << endl; // para ver las operaciones
+        total = total + nOperaciones;
+    }
+
+    cout << total << endl;
 
     return 0; 
 }

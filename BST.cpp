@@ -149,7 +149,7 @@ private:
 public:
     vector<int> inorden() {
         vector<int> numOrdenados;
-        std::cout << "Inorder: ";
+        //std::cout << "Inorder: ";
         inordenRecursivo(raiz, numOrdenados);
         return numOrdenados;
     }
@@ -158,7 +158,7 @@ private:
         if(p != nullptr) {
             inordenRecursivo(p->hijoIzquierdo, vect);
             vect.push_back(p->info);
-            cout << p->info << " ";
+            //cout << p->info << " ";
             inordenRecursivo(p->hijoDerecho, vect);
         }
     }
