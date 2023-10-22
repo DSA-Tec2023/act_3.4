@@ -3,6 +3,21 @@
 #include "BST.cpp"
 using namespace std;
 
+/*
+Este código lee un input de archivo de texto, los guarda en un árbol binario,
+lo recorre en inorden y calcula el número mínimo de comparaciones a realizarse
+tomando en cuenta que los números del archivo de texto son longitudes de listas a ordenarse.
+
+Equipo:
+Andrés Martínez, A00227463
+Fernanda Granados, A01252895
+Santiago Poblete, A01254609
+Martín Tánori, A01252900
+
+Fecha: 22 de octubre de 2023
+*/
+
+
 int main() {
     ifstream inputFile("in.txt");
     if (!inputFile.is_open()) {

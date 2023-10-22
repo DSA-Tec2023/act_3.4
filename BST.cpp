@@ -3,6 +3,18 @@
 #include <queue>
 using namespace std;
 
+/*
+Este código implementa un árbol de búsqueda binaria.
+
+Equipo:
+Andrés Martínez, A00227463
+Fernanda Granados, A01252895
+Santiago Poblete, A01254609
+Martín Tánori, A01252900
+
+Fecha: 22 de octubre de 2023
+*/
+
 class NodoArbolBinario {
 public:
     int info;
