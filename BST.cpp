@@ -132,12 +132,6 @@ public:
         }
     }
 
-
-
-
-
-
-
 public:
     void preorden() {
         std::cout << "Preorder: ";
@@ -153,16 +147,19 @@ private:
     }
 
 public:
-    void inorden() {
+    vector<int> inorden() {
+        vector<int> numOrdenados;
         std::cout << "Inorder: ";
-        inordenRecursivo(raiz);
+        inordenRecursivo(raiz, numOrdenados);
+        return numOrdenados;
     }
 private:
-    void inordenRecursivo(NodoArbolBinario* p) {
+    void inordenRecursivo(NodoArbolBinario* p, vector<int>& vect) {
         if(p != nullptr) {
-            inordenRecursivo(p->hijoIzquierdo);
+            inordenRecursivo(p->hijoIzquierdo, vect);
+            vect.push_back(p->info);
             cout << p->info << " ";
-            inordenRecursivo(p->hijoDerecho);
+            inordenRecursivo(p->hijoDerecho, vect);
         }
     }
 

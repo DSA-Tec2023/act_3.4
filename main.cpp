@@ -23,7 +23,12 @@ int main() {
 
     inputFile.close();
 
-    a.inorden();
+    vector<int> hola = a.inorden();
+    cout << endl;
+
+    for(int i=0; i<hola.size(); i++){
+        cout << hola[i] << " ";
+    }
     cout << endl;
 
     return 0; 
