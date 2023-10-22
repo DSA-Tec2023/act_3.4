@@ -10,20 +10,20 @@ int main() {
         return 1; // Sale del programa con un código de error
     }
     
-    int n;
-    inputFile >> n; // Lee la longitud del BST desde la primera línea
+    int longitudBST;
+    inputFile >> longitudBST; // Lee la longitud del BST desde la primera línea
     
-    BST a;
+    BST arbolBinario;
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < longitudBST; i++) {
         int elemento;
         inputFile >> elemento;
-        a.insertar(elemento);
+        arbolBinario.insertar(elemento);
     }
 
     inputFile.close();
 
-    vector<int> arbolOrd = a.inorden();
+    vector<int> arbolOrd = arbolBinario.inorden();
     int size = 0;
     size = arbolOrd.size();
 
