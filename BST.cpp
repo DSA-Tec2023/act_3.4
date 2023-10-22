@@ -149,7 +149,6 @@ private:
 public:
     vector<int> inorden() {
         vector<int> numOrdenados;
-        //std::cout << "Inorder: ";
         inordenRecursivo(raiz, numOrdenados);
         return numOrdenados;
     }
@@ -158,7 +157,6 @@ private:
         if(p != nullptr) {
             inordenRecursivo(p->hijoIzquierdo, vect);
             vect.push_back(p->info);
-            //cout << p->info << " ";
             inordenRecursivo(p->hijoDerecho, vect);
         }
     }
@@ -177,12 +175,6 @@ private:
         }
     }
 
-
-
-
-
-
-
 public:
     int height(NodoArbolBinario* p) {
         if (p == nullptr) {
@@ -194,7 +186,6 @@ public:
 
         return 1 + max(heightIzq, heightDer);
     }
-
 
     void visitar(int opcion) {
         while(opcion<1 || opcion>4) {
@@ -217,8 +208,6 @@ public:
             cout << "ERROR. Vuelva a intentar." << endl;
         }
     }
-
-
 
 public:
     void ancestors(int data) {

@@ -15,7 +15,7 @@ int main() {
     
     BST arbolBinario;
 
-    for (int i = 0; i < longitudBST; i++) {
+    for (int i = 0; i < longitudBST; i++) {     // Inserta los elementos en el árbol
         int elemento;
         inputFile >> elemento;
         arbolBinario.insertar(elemento);
@@ -23,11 +23,11 @@ int main() {
 
     inputFile.close();
 
-    vector<int> arbolOrd = arbolBinario.inorden();
+    vector<int> arbolOrd = arbolBinario.inorden();      
     int size = 0;
     size = arbolOrd.size();
 
-    for(int i=0; i<size; i++){
+    for(int i=0; i<size; i++){      // Muestra los elementos del árbol inorden
         cout << arbolOrd[i] << " ";
     }
     cout << endl;
